@@ -1,122 +1,184 @@
 ---
 icon: fas fa-chess-knight
 order: 4
+title: Text and Typography
+author: Uri
+date: 2024-01-01 11:33:00 +0100
+pin: true
+math: true
+mermaid: true
 ---
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
+This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
 
-There should be whitespace between paragraphs.
+## Headings
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+# H1 - heading
+{: .mt-4 .mb-0 }
 
-# Header 1
+## H2 - heading
+{: data-toc-skip='' .mt-4 .mb-0 }
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+### H3 - heading
+{: data-toc-skip='' .mt-4 .mb-0 }
 
-## Header 2
+#### H4 - heading
+{: data-toc-skip='' .mt-4 }
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+## Paragraph
 
-### Header 3
+Quisque egestas convallis ipsum, ut sollicitudin risus tincidunt a. Maecenas interdum malesuada egestas. Duis consectetur porta risus, sit amet vulputate urna facilisis ac. Phasellus semper dui non purus ultrices sodales. Aliquam ante lorem, ornare a feugiat ac, finibus nec mauris. Vivamus ut tristique nisi. Sed vel leo vulputate, efficitur risus non, posuere mi. Nullam tincidunt bibendum rutrum. Proin commodo ornare sapien. Vivamus interdum diam sed sapien blandit, sit amet aliquam risus mattis. Nullam arcu turpis, mollis quis laoreet at, placerat id nibh. Suspendisse venenatis eros eros.
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+## Lists
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+### Ordered list
 
-#### Header 4
+1. Firstly
+2. Secondly
+3. Thirdly
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+### Unordered list
 
-##### Header 5
+- Chapter
+  + Section
+    * Paragraph
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+### ToDo list
 
-###### Header 6
+- [ ] Job
+  + [x] Step 1
+  + [x] Step 2
+  + [ ] Step 3
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+### Description list
 
-### There's a horizontal rule below this.
+Sun
+: the star around which the earth orbits
 
-* * *
+Moon
+: the natural satellite of the earth, visible by reflected light from the sun
 
-### Here is an unordered list:
+## Block Quote
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+> This line shows the _block quote_.
 
-### And an ordered list:
+## Prompts
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
+> An example showing the `tip` type prompt.
+{: .prompt-tip }
 
-### And a nested list:
+> An example showing the `info` type prompt.
+{: .prompt-info }
 
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
+> An example showing the `warning` type prompt.
+{: .prompt-warning }
 
-### Small image
+> An example showing the `danger` type prompt.
+{: .prompt-danger }
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+## Tables
 
-### Large image
+| Company                      | Contact          | Country |
+|:-----------------------------|:-----------------|--------:|
+| Alfreds Futterkiste          | Maria Anders     | Germany |
+| Island Trading               | Helen Bennett    | UK      |
+| Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
 
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+## Links
 
+<http://127.0.0.1:4000>
 
-### Definition lists can be used with HTML syntax.
+## Footnote
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
+
+## Inline code
+
+This is an example of `Inline Code`.
+
+## Filepath
+
+Here is the `/path/to/the/file.extend`{: .filepath}.
+
+## Code blocks
+
+### Common
 
 ```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+This is a common code snippet, without syntax highlight and line number.
 ```
 
+### Specific Language
+
+```bash
+if [ $? -ne 0 ]; then
+  echo "The command was not successful.";
+  #do the needful / exit
+fi;
 ```
-The final element.
+
+### Specific filename
+
+```sass
+@import
+  "colors/light-typography",
+  "colors/dark-typography";
 ```
+{: file='_sass/jekyll-theme-chirpy.scss'}
+
+## Mathematics
+
+The mathematics powered by [**MathJax**](https://www.mathjax.org/):
+
+$$ \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6} $$
+
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+## Mermaid SVG
+
+```mermaid
+ gantt
+  title  Adding GANTT diagram functionality to mermaid
+  apple :a, 2017-07-20, 1w
+  banana :crit, b, 2017-07-23, 1d
+  cherry :active, c, after b a, 1d
+```
+
+## Images
+
+### Default (with caption)
+
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" }
+_Full screen width and center alignment_
+
+### Left aligned
+
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-75 .normal}
+
+### Float to left
+
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-50 .left}
+Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
+
+### Float to right
+
+![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-50 .right}
+Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
+
+### Dark/Light mode & Shadow
+
+The image below will toggle dark/light mode based on theme preference, notice it has shadows.
+
+![light mode only](/posts/20190808/devtools-light.png){: .light .w-75 .shadow .rounded-10 w='1212' h='668' }
+![dark mode only](/posts/20190808/devtools-dark.png){: .dark .w-75 .shadow .rounded-10 w='1212' h='668' }
+
+## Video
+
+{% include embed/youtube.html id='Balreaj8Yqs' %}
+
+## Reverse Footnote
+
+[^footnote]: The footnote source
+[^fn-nth-2]: The 2nd footnote source
