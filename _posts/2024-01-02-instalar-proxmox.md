@@ -32,8 +32,16 @@ Siga los pasos que se enumeran a continuación para instalar Proxmox VE en un se
 El primer paso es descargar la imagen ISO de Proxmox VE.
 
 * Navegue a la página oficial de Descargas de Proxmox y seleccione Entorno virtual de Proxmox .
+
+![Desktop View](/assets/img/proxmox/prox1.png){: .normal }
+
 * Esto lo llevará al Archivo del entorno virtual de Proxmox que almacena imágenes ISO y documentación oficial. Seleccione Imágenes ISO para continuar.
+
+![Desktop View](/assets/img/proxmox/prox2.png){: .normal }
+
 * En el momento de escribir este artículo, la última versión del instalador Proxmox VE ISO es 7.1. Si hay una versión más nueva disponible, aparece en la parte superior. Haga clic en Descargar y guarde el archivo.
+
+![Desktop View](/assets/img/proxmox/prox3.png){: .normal }
 
 ## Paso 2: preparar el medio de instalación
 
