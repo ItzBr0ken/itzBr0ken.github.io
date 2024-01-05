@@ -1,6 +1,6 @@
 ---
-icon: fas fa-stream
-order: 5
+icon: fas fa-chess-knight
+order: 4
 ---
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
