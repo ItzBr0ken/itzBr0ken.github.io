@@ -1,14 +1,13 @@
 ---
-icon: fas fa-chess-knight
-order: 4
-title: Text and Typography
+# the default layout is 'page'
+icon: fas fa-cog
+title: Ejemplos de fuentes
 author: Uri
-date: 2024-01-01 11:33:00 +0100
-pin: true
-math: true
-mermaid: true
+date: 2024-01-01 14:10:00 +0100
+categories: [Ejemplos, Ejemplos de fuentes]
+tags: [writing]
+render_with_liquid: false
 ---
-
 This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
 
 ## Headings
