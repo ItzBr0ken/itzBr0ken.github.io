@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 Hola, me llamo Oriol. Tengo 34 años y actualmente trabajo como profesor de electrónica y telecomunicaciones para el Departament d'ensenyament de la Generalitat de Catalunya
 
