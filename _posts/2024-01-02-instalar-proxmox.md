@@ -55,12 +55,29 @@ Conecte la unidad USB y copie la imagen ISO en la memoria USB usando la línea d
 * Mientras el servidor se está iniciando, acceda al menú de inicio presionando las teclas del teclado requeridas. Lo más común es que sean Esc , F2 , F10 , F11 o F12 .
 * Seleccione el medio de instalación con la imagen ISO de Proxmox y arranque desde allí.
 * A continuación, aparece el menú de Proxmox VE. Seleccione Instalar Proxmox VE para iniciar la instalación estándar.
+
+![Desktop View](/assets/img/proxmox/prox4.png){: .normal }
+
 * Lea y acepte el EULA para continuar.
+
+![Desktop View](/assets/img/proxmox/prox5.png){: .normal }
+
 * Elija el disco duro de destino donde desea instalar Proxmox. Haga clic en Opciones para especificar parámetros adicionales, como el sistema de archivos. De forma predeterminada, está configurado en ext4.
 
+![Desktop View](/assets/img/proxmox/prox6.png){: .normal }
+
 * Luego, configure la ubicación, la zona horaria y la distribución del teclado. El instalador detecta automáticamente la mayoría de estas configuraciones.
+
+![Desktop View](/assets/img/proxmox/prox8.png){: .normal }
+
 * Cree una contraseña segura para sus credenciales de administrador, vuelva a escribir la contraseña para confirmarla y escriba una dirección de correo electrónico para recibir notificaciones del administrador del sistema.
+
+![Desktop View](/assets/img/proxmox/prox9.png){: .normal }
+
 * El último paso para instalar Proxmox es establecer la configuración de red. Seleccione la interfaz de administración, un nombre de host para el servidor, una dirección IP disponible, la puerta de enlace predeterminada y un servidor DNS . Durante el proceso de instalación, utilice una dirección IPv4 o IPv6 . Para usar ambos, modifique la configuración después de la instalación.
+
+![Desktop View](/assets/img/proxmox/prox10.png){: .normal }
+
 * El instalador resume las opciones seleccionadas. Después de confirmar que todo está en orden, presione Instalar.
 * Una vez completada la instalación, retire la unidad USB y reinicie el sistema.
 
@@ -68,9 +85,20 @@ Conecte la unidad USB y copie la imagen ISO en la memoria USB usando la línea d
 
 * Una vez que se completa la instalación y el sistema se reinicia, se carga el menú de Proxmox GRUB. Seleccione Entorno Virtual Proxmox GNU/Linux y presione Enter .
 * A continuación, aparece el mensaje de bienvenida de Proxmox VE. Incluye una dirección IP que carga Proxmox. Navegue hasta esa dirección IP en un navegador web de su elección.
+
+![Desktop View](/assets/img/proxmox/prox11.png){: .normal }
+
 * Después de navegar a la dirección IP requerida, lo más probable es que vea un mensaje de advertencia que indica que la página no es segura porque Proxmox VE utiliza certificados SSL autofirmados . Seleccione para proceder a la interfaz de administración web de Proxmox.
+
+![Desktop View](/assets/img/proxmox/prox12.png){: .normal }
+
 * Para acceder a la interfaz, inicie sesión como root y proporcione la contraseña establecida al instalar Proxmox.
-* Aparece un cuadro de diálogo que indica que no hay una suscripción válida para el servidor. Proxmox ofrece un servicio complementario al que puedes suscribirte, que es opcional. Para ignorar el mensaje, haga clic en Aceptar .
+
+![Desktop View](/assets/img/proxmox/prox13.png){: .normal }
+
+* Aparece un cuadro de diálogo que indica que no hay una suscripción válida para el servidor. Proxmox ofrece un servicio complementario al que puedes suscribirte, que es opcional. Para ignorar el mensaje, haga clic en Aceptar.
+
+![Desktop View](/assets/img/proxmox/prox14.png){: .normal }
 
 ## Paso 5: crear una máquina virtual
 
@@ -78,19 +106,51 @@ Ahora que inició sesión en la consola web de Proxmox, cree una máquina virtua
 
 * Antes de seguir los pasos para crear una máquina virtual, asegúrese de tener imágenes ISO para los medios de instalación. Vaya al árbol de recursos en el lado izquierdo de su GUI.
 Seleccione el servidor que está ejecutando y haga clic en local (pve1) . Seleccione Imágenes ISO en el menú y elija entre cargar una imagen o descargarla desde una URL.
+
+![Desktop View](/assets/img/proxmox/prox15.png){: .normal }
+
 * Una vez que haya agregado una imagen ISO, continúe con la puesta en marcha de una máquina virtual. Haga clic en el botón Crear VM ubicado en el lado derecho del encabezado en la GUI.
+
+![Desktop View](/assets/img/proxmox/prox16.png){: .normal }
+
 * Proporcione información general sobre la VM:
 1. Comience seleccionando el Nodo . Si está comenzando y aún no tiene nodos, Proxmox selecciona automáticamente el nodo 1 ( pve1 ).
 2. Proporcione una identificación de máquina virtual . Cada recurso debe tener una identificación única.
 3. Finalmente, cree un nombre para la VM. Utilice un nombre fácilmente identificable.
+
+![Desktop View](/assets/img/proxmox/prox17.png){: .normal }
+
 * A continuación, cambie a la pestaña SO y seleccione la imagen ISO que desea para su VM. Defina el tipo de sistema operativo y la versión del kernel . Haga clic en Siguiente para continuar.
+
+![Desktop View](/assets/img/proxmox/prox18.png){: .normal }
+
 * Modifique las opciones del sistema (como la tarjeta gráfica y el controlador SCSI ) o deje la configuración predeterminada.
-* Luego, configure las opciones de disco duro que desee que tenga la máquina virtual. Generalmente, puedes dejar todas las configuraciones predeterminadas. Sin embargo, si el servidor físico utiliza un SSD, habilite la opción Descartar .
+
+![Desktop View](/assets/img/proxmox/prox19.png){: .normal }
+
+* Luego, configure las opciones de disco duro que desee que tenga la máquina virtual. Generalmente, puedes dejar todas las configuraciones predeterminadas. Sin embargo, si el servidor físico utiliza un SSD, habilite la opción Descartar.
+
+![Desktop View](/assets/img/proxmox/prox20.png){: .normal }
+
 * La cantidad de núcleos que tiene el servidor físico determina cuántos núcleos puede proporcionar a la VM. La cantidad de núcleos asignados también depende de la carga de trabajo prevista.
+
+![Desktop View](/assets/img/proxmox/prox21.png){: .normal }
+
 * A continuación, elija cuánta memoria (MiB) desea asignar a la VM.
+
+![Desktop View](/assets/img/proxmox/prox22.png){: .normal }
+
 * Pase a la pestaña Red . Se recomienda separar la interfaz de administración y la red VM. Por ahora, deje la configuración predeterminada.
+
+![Desktop View](/assets/img/proxmox/prox23.png){: .normal }
+
 * Después de hacer clic en  Siguiente , Proxmox carga la pestaña Confirmar que resume las opciones de VM seleccionadas. Para iniciar la VM inmediatamente, marque la casilla debajo de la información que aparece o inicie la VM manualmente más tarde. Haga clic en Finalizar para crear la VM.
+
+![Desktop View](/assets/img/proxmox/prox24.png){: .normal }
+
 * Vea la VM recién creada en el árbol de recursos en el lado izquierdo de la pantalla. Haga clic en la VM para ver sus especificaciones y opciones.
+
+![Desktop View](/assets/img/proxmox/prox25.png){: .normal }
 
 
 
