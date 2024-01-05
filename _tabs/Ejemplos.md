@@ -1,7 +1,6 @@
-
 ---
 icon: fas fa-stream
-order: 1
+order: 5
 ---
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
