@@ -7,8 +7,9 @@ date: 2024-01-01 14:20:00 +0100
 categories: [Ejemplos, Ejemplos de fuentes]
 tags: [writing]
 math: true
+pin: true
+mermaid: true
 image: /assets/img/devices-mockup.png
-render_with_liquid: false
 ---
 This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
 
@@ -146,4 +147,51 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
   banana :crit, b, 2017-07-23, 1d
   cherry :active, c, after b a, 1d
 ```
+
+## Mermaid SVG
+
+```mermaid
+ gantt
+  title  Adding GANTT diagram functionality to mermaid
+  apple :a, 2017-07-20, 1w
+  banana :crit, b, 2017-07-23, 1d
+  cherry :active, c, after b a, 1d
+```
+
+## Images
+
+### Default (with caption)
+
+![Desktop View](/assets/img/devtools/mockup1.png){: width="972" height="589" }
+_Full screen width and center alignment_
+
+### Left aligned
+
+![Desktop View](/assets/img/devtools/mockup2.png){: width="972" height="589" .w-75 .normal}
+
+### Float to left
+
+![Desktop View](/assets/img/devtools/mockup3.png){: width="972" height="589" .w-50 .left}
+Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
+
+### Float to right
+
+![Desktop View](/assets/img/devtools/mockup4.png){: width="972" height="589" .w-50 .right}
+Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
+
+### Dark/Light mode & Shadow
+
+The image below will toggle dark/light mode based on theme preference, notice it has shadows.
+
+![light mode only](/assets/img/devtools/mockup5.png){: .light .w-75 .shadow .rounded-10 w='1212' h='668' }
+![dark mode only](/assets/img/devtools/mockup5.png){: .dark .w-75 .shadow .rounded-10 w='1212' h='668' }
+
+## Video
+
+{% include embed/youtube.html id='Balreaj8Yqs' %}
+
+## Reverse Footnote
+
+[^footnote]: The footnote source
+[^fn-nth-2]: The 2nd footnote source
 
