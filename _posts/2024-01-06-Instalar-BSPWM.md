@@ -9,7 +9,7 @@ tags: [Informática, BSPWM, Instalar, Kali, Linux]
 render_with_liquid: false
 mermaid: true
 comments: true
-image: /assets/img/bspwm.jpg
+image: /assets/img/kali.png
 order: 5
 ---
 

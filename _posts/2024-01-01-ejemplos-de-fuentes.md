@@ -7,7 +7,6 @@ date: 2024-01-01 14:20:00 +0100
 categories: [Ejemplos, Ejemplos de fuentes]
 tags: [writing]
 math: true
-pin: true
 mermaid: true
 image: /assets/img/devices-mockup.png
 ---
