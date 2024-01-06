@@ -39,5 +39,29 @@ ufw start
 
 ## Ajustar el escritorio para utilizar remotamente a BSPWM
 
-Una vez dentro del sistema de BSPWM podemos ajustar la resolucion a la pantalla del escritorio remoto utilizando XRANDR y ARANDR
+Una vez dentro del sistema de BSPWM podemos ajustar la resolución a la pantalla del escritorio remoto utilizando `xrandr` y `arandr`. Primero, instalaremos los paquetes ejecutaremos el comando ARANDR y guardaremos la configuración
 
+```
+apt-get install arandr
+arandr
+```
+
+Una vez guardado el archivo de la resolución deseada se guardara en formato de script ejecutable (.sh). Seguidamente, nos dirigiremos a la siguiente carpeta
+
+```
+cd /home/usuario/.config/bspwm
+```
+Donde, en la palabra `usuario` debemos sustituirla por nuestro usuario linux. Después, modificar el archivo bspwmrc
+
+```
+nano bspwmrc
+```
+Una vez dentro, buscaremos el apartado que aparece como `#RESOLUCION ARANDR`. Introduciremos la dirección del archivo en este punto del documento
+
+```
+/home/usuario/archivo.sh
+```
+Recuerde sustituir la palabra `usuario` por la del usuario de linux y la palabra `archivo` por la del nombre del archivo guardado previamente con la funcion `arandr`.
+
+> Ten en cuenta que la dirección del archivo (`path`) puede ser diferente de la escrita anteriormente.
+{: .prompt-warning }
