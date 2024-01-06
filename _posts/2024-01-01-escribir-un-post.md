@@ -7,6 +7,7 @@ date: 2024-01-01 14:10:00 +0100
 categories: [Ejemplos, Como escribir un post]
 tags: [writing]
 render_with_liquid: false
+image: /assets/img/post.jpeg
 order: 5
 ---
 

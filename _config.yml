@@ -16,10 +16,10 @@ timezone:
 
 title: Uri Vegas # the main title
 
-tagline: Ingeniero de Telecomunicaciones # it will display as the sub-title
+tagline: Ingeniero Electrónico en Telecomunicaciones # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Desarrollo de proyectos de electrónica i/o informática
+  Página web enfocada a la divulgación y de proyectos de electrónica i/o informática. 
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.

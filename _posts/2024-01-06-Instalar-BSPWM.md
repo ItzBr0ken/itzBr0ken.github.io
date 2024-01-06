@@ -8,6 +8,8 @@ categories: [Informática, Kali Linux - BSPWM]
 tags: [Informática, BSPWM, Instalar, Kali, Linux]
 render_with_liquid: false
 mermaid: true
+comments: true
+image: /assets/img/bspwm.jpg
 order: 5
 ---
 
@@ -63,5 +65,6 @@ Una vez dentro, buscaremos el apartado que aparece como `#RESOLUCION ARANDR`. In
 ```
 Recuerde sustituir la palabra `usuario` por la del usuario de linux y la palabra `archivo` por la del nombre del archivo guardado previamente con la funcion `arandr`.
 
-> Ten en cuenta que la dirección del archivo (`path`) puede ser diferente de la escrita anteriormente.
+> Ten en cuenta que la dirección del archivo (`path`) puede ser diferente de la descrita anteriormente.
 {: .prompt-warning }
+

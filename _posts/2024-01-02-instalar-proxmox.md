@@ -3,10 +3,11 @@
 icon: fas fa-cog
 title: Instalar Proxmox
 author: Uri
-date: 2024-01-01 14:10:00 +0100
+date: 2024-01-02 14:10:00 +0100
 categories: [Informática, Instalar Proxmox]
 tags: [Informática, Proxmox]
 render_with_liquid: false
+image: /assets/img/proxmox.jpg
 order: 5
 ---
 
