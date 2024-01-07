@@ -23,28 +23,47 @@ cd BSPWMkali
 chmod +x install.sh
 ./install.sh
 ```
+Agradecimientos para [`s4vitar`](https://www.youtube.com/@s4vitar) por el aporte a la comunidad.
 
 ## Acceder remotamente a BSPWM
 
 En el caso de que el ordenador sea un ordenador remoto vamos a habilitar ciertas funciones para poder acceder remotamente
 
 ```
-echo bspwm > ~/.xsessions 
-apt-get install xrdp -y 
-systemctl start xrdp 
-systemctl enable xrdp 
-apt-get install ufw 
-ufw allow ssh
-ufw allow 3389 
-ufw start 
+echo bspwm > ~/.xsession 
+sudo apt-get install xrdp -y 
+sudo systemctl start xrdp 
+sudo systemctl enable xrdp 
+sudo apt-get install ufw 
+sudo ufw allow ssh
+sudo ufw allow 3389 
+sudo ufw enable
 ```
+
+Para poder acceder remotamente hemos de conocer la IP del ordenador. Utilizaremos el comando siguiente para conocer la IP:
+
+```
+ip address
+```
+> Recomiendo poner (`IP estática`) para que la dirección no cambie cuando reiniciemos el PC.
+{: .prompt-info }
+
+Una vez terminado todo el proceso, es importante reiniciar para verificar que todo este funcionando correctamente.
+
+```
+rebot now
+```
+
+Para iniciar en `bspwm` aseugrarse de poner la session correcta.
+
+![Desktop View](/assets/img/bspwm/Kali2.png){: .normal }
 
 ## Ajustar el escritorio para utilizar remotamente a BSPWM
 
 Una vez dentro del sistema de BSPWM podemos ajustar la resolución a la pantalla del escritorio remoto utilizando `xrandr` y `arandr`. Primero, instalaremos los paquetes ejecutaremos el comando ARANDR y guardaremos la configuración
 
 ```
-apt-get install arandr
+sudo apt-get install arandr
 arandr
 ```
 
@@ -56,7 +75,7 @@ cd /home/usuario/.config/bspwm
 Donde, en la palabra `usuario` debemos sustituirla por nuestro usuario linux. Después, modificar el archivo bspwmrc
 
 ```
-nano bspwmrc
+sudo nano bspwmrc
 ```
 Una vez dentro, buscaremos el apartado que aparece como `#RESOLUCION ARANDR`. Introduciremos la dirección del archivo en este punto del documento
 
